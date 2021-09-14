@@ -8,6 +8,19 @@ function App() {
         RIT Senior Project - Palmyra Racing Association
       </header>
       <h1></h1>
+      <h3>The Team</h3>
+      <h4>Seniors</h4>
+      <ul>
+        <li>Brianna Fehring</li>
+        <li>Jacob Jirinec</li>
+        <li>Elijah Parish</li>
+        <li>Matt Robison</li>
+        <li>CJ Schaefer</li>
+      </ul>
+      <h4>Faculty Coach</h4>
+      Bruce Herring
+      <h4>Sponsor</h4>
+      Alan Delimon
       <h3>Project Synopsis</h3>
       <p>
         The Palmyra Racing Association Club Manager is a web and mobile application sponsored by the Palmyra Racing Association in order to facilitate the management of many facets of the club, including membership, member participation, and event tracking and signups.
