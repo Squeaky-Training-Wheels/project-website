@@ -1,6 +1,7 @@
 import './App.css';
 import Artifact from './Artifact';
 import artifacts from './artifacts.json'
+import TimeTracker from './TimeTracker';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
         Club members can use the application for updating their personal information, renewing their membership, and signing up to volunteer at events. Club board members can use the application to view and edit membership data for all active members as well as signup information for every event. 
         Board members can also create new events and update existing ones, as well as assign club members to events manually. These features are currently provided via separate applications, and this application seeks to unify them into one easy to use, modernized user interface.
       </p>
+      <h3>Time Tracking</h3>
+      <TimeTracker />
       <h3>Artifacts</h3>
       {
         artifacts.map((artifact) => (
