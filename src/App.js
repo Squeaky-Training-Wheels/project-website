@@ -1,5 +1,7 @@
 import './App.css';
 import Artifact from './Artifact';
+import Timesheet from './Timesheet';
+import timesheets from './timesheets.json'
 import artifacts from './artifacts.json'
 import TimeTracker from './TimeTracker';
 
@@ -31,7 +33,11 @@ function App() {
         Board members can also create new events and update existing ones, as well as assign club members to events manually. These features are currently provided via separate applications, and this application seeks to unify them into one easy to use, modernized user interface.
       </p>
       <h3>Time Tracking</h3>
-      <TimeTracker />
+      {
+        timesheets.map((timesheet) => (
+          <Timesheet name={timesheet.name} caption={timesheet.caption} />
+        ))
+      }
       <h3>Artifacts</h3>
       {
         artifacts.map((artifact) => (
