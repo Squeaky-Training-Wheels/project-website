@@ -6,11 +6,11 @@ class Timesheet extends React.Component {
     }
 
     render() {
-        const { nameTest, caption } = this.props;
+        const { sheetName, caption } = this.props;
         return (
             <div>
-                <h4>{nameTest}</h4>
-                <img src={`./timesheets/${nameTest}`}></img>
+                <h4>{sheetName}</h4>
+                <img src={`./timesheets/${sheetName}`}></img>
                 <br />
                 <span style={{ textAlign: 'center' }}>{caption}</span>
             </div>
