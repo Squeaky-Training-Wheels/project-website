@@ -15,11 +15,11 @@ function App() {
       <h3>The Team</h3>
       <h4>Seniors</h4>
       <ul>
-        <li>Brianna Fehring</li>
-        <li>Jacob Jirinec</li>
-        <li>Elijah Parish</li>
-        <li>Matt Robison</li>
-        <li>CJ Schaefer</li>
+        <li>Brianna Fehring - Web and Mobile Teck Lead</li>
+        <li>Jacob Jirinec - Backend Tech Lead</li>
+        <li>Elijah Parish - Communications Lead + Website Maintainer</li>
+        <li>Matt Robison - Git Lord + Process Manager + CI/CD Manager</li>
+        <li>CJ Schaefer - Project Manager + Scrum Master</li>
       </ul>
       <h4>Faculty Coach</h4>
       Bruce Herring
