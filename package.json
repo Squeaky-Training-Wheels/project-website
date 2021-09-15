@@ -2,6 +2,7 @@
   "name": "project-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://squeaky-training-wheels.github.io/project-website/",
   "dependencies": {
     "@chakra-ui/react": "^1.6.7",
     "@emotion/react": "^11.4.1",
@@ -18,11 +19,15 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build" 
   },
   "eslintConfig": {
     "extends": [
