@@ -9,8 +9,7 @@ import {
     AccordionItem,
     AccordionPanel,
     Box,
-    Center,
-    Heading, Spacer,
+    Heading,
     Text
 } from "@chakra-ui/react";
 
