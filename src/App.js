@@ -1,7 +1,8 @@
 import './App.css';
 import Artifact from './Artifact';
+import Timesheet from './Timesheet';
+import timesheets from './timesheets.json'
 import artifacts from './artifacts.json'
-import TimeTracker from './TimeTracker';
 
 function App() {
   return (
@@ -9,15 +10,14 @@ function App() {
       <header className="App-header">
         RIT Senior Project - Palmyra Racing Association
       </header>
-      <h1></h1>
       <h3>The Team</h3>
       <h4>Seniors</h4>
       <ul>
-        <li>Brianna Fehring</li>
-        <li>Jacob Jirinec</li>
-        <li>Elijah Parish</li>
-        <li>Matt Robison</li>
-        <li>CJ Schaefer</li>
+        <li>Brianna Fehring - Web and Mobile Tech Lead</li>
+        <li>Jacob Jirinec - Backend Tech Lead</li>
+        <li>Elijah Parish - Communications Lead + Website Maintainer</li>
+        <li>Matt Robison - Git Lord + Process Manager + CI/CD Manager</li>
+        <li>CJ Schaefer - Project Manager + Scrum Master</li>
       </ul>
       <h4>Faculty Coach</h4>
       Bruce Herring
@@ -31,7 +31,11 @@ function App() {
         Board members can also create new events and update existing ones, as well as assign club members to events manually. These features are currently provided via separate applications, and this application seeks to unify them into one easy to use, modernized user interface.
       </p>
       <h3>Time Tracking</h3>
-      <TimeTracker />
+      {
+        timesheets.map((timesheet) => (
+          <Timesheet sheetName={timesheet.sheetName} caption={timesheet.caption} />
+        ))
+      }
       <h3>Artifacts</h3>
       {
         artifacts.map((artifact) => (
