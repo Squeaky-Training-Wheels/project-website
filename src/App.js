@@ -9,9 +9,10 @@ import {
     AccordionItem,
     AccordionPanel,
     Box,
-    Heading,
+    Heading, Image,
     Text
 } from "@chakra-ui/react";
+
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Heading bg="brand.100" color="brand.700">
                 <Text fontSize="6xl">RIT Senior Project - Palmyra Racing Association Club Manager</Text>
             </Heading>
-
+            <Image display="flex" h="700px" w={"100%"} src="http://wallpaperstock.net/motocross-racing_wallpapers_46236_852x480.jpg"/>
 
             <Accordion defaultIndex={[0]} allowMultiple={true}>
                 <AccordionItem >
@@ -90,15 +91,25 @@ function App() {
                         <TimeTracker />
                     </AccordionPanel>
                 </AccordionItem>
+                <AccordionItem >
+                    <h2>
+                        <AccordionButton bg="brand.400">
+                            <Box fontSize="2xl" fontWeight="semibold" flex="1" textAlign="left">
+                                Artifacts
+                            </Box>
+                            <AccordionIcon />
+                        </AccordionButton>
+                    </h2>
+                    <AccordionPanel pb={4} bg="brand.600">
+                        {
+                            artifacts.map((artifact) => (
+                                <Artifact artifactName={artifact.artifactName} caption={artifact.caption} />
+                            ))
+                        }
+                    </AccordionPanel>
+                </AccordionItem>
             </Accordion>
-
-      <h3>Artifacts</h3>
-      {
-        artifacts.map((artifact) => (
-          <Artifact artifactName={artifact.artifactName} caption={artifact.caption} />
-        ))
-      }
-    </Box>
+        </Box>
   );
 }
 
