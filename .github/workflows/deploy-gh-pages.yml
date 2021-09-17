@@ -14,9 +14,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       
+      # `npm ci` is `npm install` optimized for CI, providing
+      # performance and reliability improvements
       - name: Build project
         run: |
-          npm install
+          npm ci
           npm run build
           
       - name: Deploy build
