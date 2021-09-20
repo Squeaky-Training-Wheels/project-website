@@ -1,8 +1,12 @@
 import './App.css';
-import Artifact from './Artifact';
-import Timesheet from './Timesheet';
-import timesheets from './timesheets.json'
-import artifacts from './artifacts.json'
+import Timesheet from './accordionComponents/Timesheet';
+import FourUp from './accordionComponents/FourUp';
+
+import timesheets from './accordionData/timesheets.json'
+import fourUps from './accordionData/fourups.json'
+
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+
 import {
     Accordion,
     AccordionButton,
@@ -13,7 +17,6 @@ import {
     Heading, Image,
     Text
 } from "@chakra-ui/react";
-
 
 function App() {
   return (
@@ -91,7 +94,24 @@ function App() {
                     <AccordionPanel pb={4} bg="brand.600">
                         {
                             timesheets.map((timesheet) => (
-                                <Timesheet display="flex" h="700px" key={timesheet} sheetName={timesheet.sheetName} caption={timesheet.caption}/>
+                                <Timesheet h="700px" w={"100%"} key={timesheet.sheetName} sheetName={timesheet.sheetName} caption={timesheet.caption}/>
+                            ))
+                        }
+                    </AccordionPanel>
+                </AccordionItem>
+                <AccordionItem>
+                    <h2>
+                        <AccordionButton bg="brand.400">
+                            <Box fontSize="2xl" fontWeight="semibold" flex="1" textAlign="left">
+                                Weekly Four Ups
+                            </Box>
+                            <AccordionIcon />
+                        </AccordionButton>
+                    </h2>
+                    <AccordionPanel pb={4} bg="brand.600">
+                        {
+                            fourUps.map((fourup) => (
+                                <FourUp h="700px" w={"100%"} key={fourup.fourUpName} fourUpName={fourup.fourUpName} caption={fourup.caption}/>
                             ))
                         }
                     </AccordionPanel>
@@ -100,17 +120,27 @@ function App() {
                     <h2>
                         <AccordionButton bg="brand.400">
                             <Box fontSize="2xl" fontWeight="semibold" flex="1" textAlign="left">
-                                Artifacts
+                                Project Plan
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4} bg="brand.600">
-                        {
-                            artifacts.map((artifact) => (
-                                <Artifact display="flex" h="700px" key={artifact} artifactName={artifact.artifactName} caption={artifact.caption} />
-                            ))
-                        }
+                    <Document
+                        file={process.env.PUBLIC_URL + '/ProjectPlan.pdf'}
+                    >
+                        <Page pageNumber={1}/>
+                        <br/>
+                        <Page pageNumber={2}/>
+                        <br/>
+                        <Page pageNumber={3}/>
+                        <br/>
+                        <Page pageNumber={4}/>
+                        <br/>
+                        <Page pageNumber={5}/>
+                        <br/>
+                        <Page pageNumber={6}/>
+                    </Document>
                     </AccordionPanel>
                 </AccordionItem>
             </Accordion>
