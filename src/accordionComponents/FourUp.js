@@ -7,7 +7,7 @@ class FourUp extends React.Component {
         return (
             <div>
                 <h4>{fourUpName}</h4>
-                <Image src={process.env.PUBLIC_URL + `/fourups/${fourUpName}.png`} alt={caption} />
+                <Image src={process.env.PUBLIC_URL + `/fourups/${fourUpName}.png`} alt={fourUpName} />
                 <br />
                 <span style={{ textAlign: 'center' }}>{caption}</span>
             </div>
