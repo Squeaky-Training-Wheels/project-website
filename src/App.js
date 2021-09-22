@@ -4,8 +4,8 @@ import FourUp from './accordionComponents/FourUp';
 
 import timesheets from './accordionData/timesheets.json'
 import fourUps from './accordionData/fourups.json'
-
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import ProjectPlanPdf from './assets/ProjectPlan.pdf'
 
 import {
     Accordion,
@@ -127,7 +127,7 @@ function App() {
                     </h2>
                     <AccordionPanel pb={4} bg="brand.600">
                     <Document
-                        file={process.env.PUBLIC_URL + '/ProjectPlan.pdf'}
+                        file={ProjectPlanPdf}
                     >
                         <Page pageNumber={1}/>
                         <br/>
