@@ -4,7 +4,7 @@ import FourUp from './accordionComponents/FourUp';
 
 import timesheets from './accordionData/timesheets.json'
 import fourUps from './accordionData/fourups.json'
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import { Document, Page } from 'react-pdf/dist/umd/entry.webpack';
 import ProjectPlanPdf from './assets/ProjectPlan.pdf'
 
 import {
