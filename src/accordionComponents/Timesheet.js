@@ -7,7 +7,7 @@ class Timesheet extends React.Component {
         return (
             <div>
                 <h4>{sheetName}</h4>
-                <Image src={process.env.PUBLIC_URL + `/timesheets/${sheetName}.png`} alt={sheetName} />
+                <Image src={process.env.PUBLIC_URL + `/images/${sheetName}.png`} alt={sheetName} />
                 <br />
                 <span style={{ textAlign: 'center' }}>{caption}</span>
             </div>
