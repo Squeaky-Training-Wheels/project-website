@@ -4,8 +4,9 @@ import FourUp from './accordionComponents/FourUp';
 
 import timesheets from './accordionData/timesheets.json'
 import fourUps from './accordionData/fourups.json'
-import { Document, Page } from 'react-pdf/dist/umd/entry.webpack';
+
 import ProjectPlanPdf from './assets/ProjectPlan.pdf'
+import { Document, Page, pdfjs } from "react-pdf";
 
 import {
     Accordion,
@@ -17,6 +18,8 @@ import {
     Heading, Image,
     Text
 } from "@chakra-ui/react";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function App() {
   return (
