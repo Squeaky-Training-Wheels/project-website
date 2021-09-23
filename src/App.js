@@ -5,7 +5,6 @@ import FourUp from './accordionComponents/FourUp';
 import timesheets from './accordionData/timesheets.json'
 import fourUps from './accordionData/fourups.json'
 
-import ProjectPlanPdf from './assets/ProjectPlan.pdf'
 import { Document, Page, pdfjs } from "react-pdf";
 
 import {
@@ -27,7 +26,7 @@ function App() {
             <Heading bg="brand.100" color="brand.700">
                 <Text fontSize="6xl">RIT Senior Project - Palmyra Racing Association Club Manager</Text>
             </Heading>
-            <Image display="flex" h="700px" w={"100%"} src="http://wallpaperstock.net/motocross-racing_wallpapers_46236_852x480.jpg"/>
+            <Image display="flex" h="700px" w={"100%"} src="https://wallpaperstock.net/motocross-racing_wallpapers_46236_852x480.jpg"/>
 
             <Accordion defaultIndex={[0]} allowMultiple={true}>
                 <AccordionItem >
@@ -130,7 +129,7 @@ function App() {
                     </h2>
                     <AccordionPanel pb={4} bg="brand.600">
                     <Document
-                        file={ProjectPlanPdf}
+                        file={process.env.PUBLIC_URL + '/ProjectPlan.pdf'}
                     >
                         <Page pageNumber={1}/>
                         <br/>
