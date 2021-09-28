@@ -16,7 +16,7 @@ const theme = extendTheme({
         }
     },
     fonts: {
-        heading: "Russo One",
+        heading: "Helvetica",
         body: "Aileron"
     }
 })
