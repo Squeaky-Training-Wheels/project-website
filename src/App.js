@@ -1,9 +1,14 @@
 import './App.css';
 import Timesheet from './accordionComponents/Timesheet';
 import FourUp from './accordionComponents/FourUp';
+import HeaderImage from './accordionComponents/HeaderImage';
 
 import timesheets from './accordionData/timesheets.json'
 import fourUps from './accordionData/fourups.json'
+import headerImages from './accordionData/headerImages.json';
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 import { Document, Page, pdfjs } from "react-pdf";
 
@@ -14,24 +19,43 @@ import {
     AccordionItem,
     AccordionPanel,
     Box,
-    Heading, Image,
-    Text
+    Heading,
+    Text,
+    Wrap,
+    Center
 } from "@chakra-ui/react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
+// display="flex" h="700px" w={"100%"} src="https://wallpaperstock.net/motocross-racing_wallpapers_46236_852x480.jpg"/>
 function App() {
   return (
-    <Box className="App" bg="brand.700" color="brand.800">
-            <Heading bg="brand.100" color="brand.700">
-                <Text fontSize="6xl">RIT Senior Project - Palmyra Racing Association Club Manager</Text>
+    <Box className="App" bg="brand.100" color="brand.800">
+            <Heading bg="brand.100" color="brand.700" p="3">
+                <Text fontSize="2xl">RIT SENIOR PROJECT - PALMYRA RACING ASSOCIATION CLUB MANAGER</Text>
             </Heading>
-            <Image display="flex" h="700px" w={"100%"} src="https://wallpaperstock.net/motocross-racing_wallpapers_46236_852x480.jpg"/>
-
+            <Carousel 
+                stopOnHover={false}
+                autoPlay={true}
+                interval={10000}
+                transitionTime={1500}
+                showStatus={false}
+                infiniteLoop={true}
+                showThumbs={false}
+                showArrows={false}
+                renderIndicator={false}
+                display="flex"
+                h="700px"
+                w={"100%"}>
+                {
+                    headerImages.map((headerImage) => (
+                        <HeaderImage key={headerImage.imageName} imageName={headerImage.imageName}/>
+                    ))
+                }
+            </Carousel> 
             <Accordion defaultIndex={[0]} allowMultiple={true}>
-                <AccordionItem >
+                <AccordionItem>
                     <h2>
-                        <AccordionButton bg="brand.400">
+                        <AccordionButton bg="brand.400"  _hover={{ background: "brand.500" }}>
                             <Box fontSize="2xl" fontWeight="semibold" flex="1" textAlign="left">
                                 The Team
                             </Box>
@@ -55,7 +79,7 @@ function App() {
                 </AccordionItem>
                 <AccordionItem>
                     <h2>
-                        <AccordionButton bg="brand.400">
+                        <AccordionButton bg="brand.400" _hover={{ background: "brand.500" }}>
                             <Box fontSize="2xl" fontWeight="semibold" flex="1" textAlign="left">
                                 Project Synopsis
                             </Box>
@@ -86,7 +110,7 @@ function App() {
                 </AccordionItem>
                 <AccordionItem>
                     <h2>
-                        <AccordionButton bg="brand.400">
+                        <AccordionButton bg="brand.400" _hover={{ background: "brand.500" }}>
                             <Box fontSize="2xl" fontWeight="semibold" flex="1" textAlign="left">
                                 Time Tracking
                             </Box>
@@ -94,16 +118,18 @@ function App() {
                         </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4} bg="brand.600">
-                        {
-                            timesheets.map((timesheet) => (
-                                <Timesheet h="700px" w={"100%"} key={timesheet.sheetName} sheetName={timesheet.sheetName} caption={timesheet.caption}/>
-                            ))
-                        }
+                        <Carousel showStatus="false">
+                            {
+                                timesheets.map((timesheet) => (
+                                    <Timesheet key={timesheet.sheetName} sheetName={timesheet.sheetName} caption={timesheet.caption}/>
+                                ))
+                            }
+                        </Carousel>
                     </AccordionPanel>
                 </AccordionItem>
                 <AccordionItem>
                     <h2>
-                        <AccordionButton bg="brand.400">
+                        <AccordionButton bg="brand.400" _hover={{ background: "brand.500" }}>
                             <Box fontSize="2xl" fontWeight="semibold" flex="1" textAlign="left">
                                 Weekly Four Ups
                             </Box>
@@ -111,16 +137,18 @@ function App() {
                         </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4} bg="brand.600">
-                        {
-                            fourUps.map((fourup) => (
-                                <FourUp h="700px" w={"100%"} key={fourup.fourUpName} fourUpName={fourup.fourUpName} caption={fourup.caption}/>
-                            ))
-                        }
+                        <Carousel>
+                            {
+                                fourUps.map((fourup) => (
+                                    <FourUp key={fourup.fourUpName} fourUpName={fourup.fourUpName} caption={fourup.caption}/>
+                                ))
+                            }
+                        </Carousel>
                     </AccordionPanel>
                 </AccordionItem>
                 <AccordionItem >
                     <h2>
-                        <AccordionButton bg="brand.400">
+                        <AccordionButton bg="brand.400" _hover={{ background: "brand.500" }}>
                             <Box fontSize="2xl" fontWeight="semibold" flex="1" textAlign="left">
                                 Project Plan
                             </Box>
@@ -128,21 +156,20 @@ function App() {
                         </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4} bg="brand.600">
-                    <Document
-                        file={process.env.PUBLIC_URL + '/ProjectPlan.pdf'}
-                    >
-                        <Page pageNumber={1}/>
-                        <br/>
-                        <Page pageNumber={2}/>
-                        <br/>
-                        <Page pageNumber={3}/>
-                        <br/>
-                        <Page pageNumber={4}/>
-                        <br/>
-                        <Page pageNumber={5}/>
-                        <br/>
-                        <Page pageNumber={6}/>
-                    </Document>
+                        <Center>
+                            <Document
+                                file={process.env.PUBLIC_URL + '/ProjectPlan.pdf'}
+                            >
+                                <Wrap justify="center">
+                                    <Page pageNumber={1}/>
+                                    <Page pageNumber={2}/>
+                                    <Page pageNumber={3}/>
+                                    <Page pageNumber={4}/>
+                                    <Page pageNumber={5}/>
+                                    <Page pageNumber={6}/>
+                                </Wrap>
+                            </Document>
+                        </Center>
                     </AccordionPanel>
                 </AccordionItem>
             </Accordion>
