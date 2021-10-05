@@ -26,7 +26,7 @@ import {
 } from "@chakra-ui/react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-// display="flex" h="700px" w={"100%"} src="https://wallpaperstock.net/motocross-racing_wallpapers_46236_852x480.jpg"/>
+
 function App() {
   return (
     <Box className="App" bg="brand.100" color="brand.800">
