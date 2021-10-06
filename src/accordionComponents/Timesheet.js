@@ -9,7 +9,7 @@ class Timesheet extends React.Component {
             <Center p="5">
                 <VStack>
                     <Box width="100%">
-                        <Image height="600" src={process.env.PUBLIC_URL + `/images/${sheetName}.png`} alt={sheetName} />
+                        <Image height="600" src={`${process.env.PUBLIC_URL}/images/${sheetName}.png`} alt={sheetName} />
                     </Box>
                     <Box p="5">
                         <span style={{ textAlign: 'center' }}>{caption}</span>
