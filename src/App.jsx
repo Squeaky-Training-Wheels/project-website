@@ -13,6 +13,7 @@ import {
     Text,
     Wrap,
     Center,
+    Stack,
 } from '@chakra-ui/react';
 import Timesheet from './accordionComponents/Timesheet';
 import FourUp from './accordionComponents/FourUp';
@@ -22,6 +23,7 @@ import Card from './Card';
 import timesheets from './accordionData/timesheets.json';
 import fourUps from './accordionData/fourups.json';
 import headerImages from './accordionData/headerImages.json';
+import team from './team.json';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -53,7 +55,6 @@ function App() {
                     ))
                 }
             </Carousel>
-            <Card />
             <Accordion defaultIndex={[0]} allowMultiple>
                 <AccordionItem>
                     <h2>
@@ -66,13 +67,13 @@ function App() {
                     </h2>
                     <AccordionPanel pb={4} bg="brand.600">
                         <Text fontSize="3xl" fontWeight="bold">Seniors</Text>
-                        <ul>
-                            <li>Brianna Fehring - Web and Mobile Tech Lead</li>
-                            <li>Jacob Jirinec - Backend Tech Lead</li>
-                            <li>Elijah Parish - Communications Lead + Website Maintainer</li>
-                            <li>Matt Robison - Git Lord + Process Manager + CI/CD Manager</li>
-                            <li>CJ Schaefer - Project Manager + Scrum Master</li>
-                        </ul>
+                        <Stack direction="row" justify="center">
+                            {
+                                team.map((member) => (
+                                    <Card name={member.name} roles={member.roles} picture={member.picture} />
+                                ))
+                            }
+                        </Stack>
                         <Text fontSize="2xl" fontWeight="bold">Faculty Coach</Text>
                         Bruce Herring
                         <Text fontSize="2xl" fontWeight="bold">Sponsor</Text>
