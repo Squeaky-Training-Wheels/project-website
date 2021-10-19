@@ -17,6 +17,7 @@ import {
 import Timesheet from './accordionComponents/Timesheet';
 import FourUp from './accordionComponents/FourUp';
 import HeaderImage from './accordionComponents/HeaderImage';
+import Card from './Card';
 
 import timesheets from './accordionData/timesheets.json';
 import fourUps from './accordionData/fourups.json';
@@ -52,6 +53,7 @@ function App() {
                     ))
                 }
             </Carousel>
+            <Card />
             <Accordion defaultIndex={[0]} allowMultiple>
                 <AccordionItem>
                     <h2>
