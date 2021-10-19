@@ -8,7 +8,6 @@ import {
     Flex,
     Text,
     Stack,
-    useColorModeValue,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
@@ -17,35 +16,32 @@ export default function Card(props) {
     return (
         <Center py={6}>
             <Box
+                minW="200px"
                 maxW="200px"
                 w="full"
-                maxH="500px"
+                minH="250px"
+                maxH="250px"
                 h="full"
-                bg={useColorModeValue('white', 'gray.800')}
+                bg="brand.500"
                 boxShadow="2xl"
                 rounded="md"
                 overflow="hidden"
             >
                 <Box px={6}>
-                    <Flex justify="center" mt={3}>
+                    <Flex justify="center" mt={3} pb={3}>
                         <Avatar
                             size="xl"
                             src={`${process.env.PUBLIC_URL}/images/${picture}`}
                             alt="Author"
-                            css={
-                                {
-                                    border: '2px solid white',
-                                }
-                            }
                         />
                     </Flex>
                     <Stack spacing={0} align="center" mb={5}>
-                        <Heading fontSize="2xl" fontWeight={500} fontFamily="body">
+                        <Heading fontSize="2xl" fontWeight="semibold" fontFamily="body" color="brand.200">
                             {name}
                         </Heading>
                         {
                             roles.map((role) => (
-                                <Text color="gray.500">{role}</Text>
+                                <Text color="brand.200">{role}</Text>
                             ))
                         }
                     </Stack>
