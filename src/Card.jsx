@@ -17,12 +17,14 @@ export default function Card(props) {
     return (
         <Center py={6}>
             <Box
-                maxW="270px"
+                maxW="200px"
                 w="full"
+                maxH="500px"
+                h="full"
                 bg={useColorModeValue('white', 'gray.800')}
                 boxShadow="2xl"
                 rounded="md"
-                // overflow="hidden"
+                overflow="hidden"
             >
                 <Box px={6}>
                     <Flex justify="center" mt={3}>
