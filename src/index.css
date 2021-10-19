@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.carousel .control-next.control-arrow, .carousel .control-next.control-arrow{
+  background: #B2AFAF !important;
+}
+
+.carousel .control-prev.control-arrow, .carousel .control-prev.control-arrow {
+  background: #B2AFAF !important;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 432px;
+  max-height: 289px;
+}
