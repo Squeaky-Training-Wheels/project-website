@@ -273,7 +273,7 @@ function App() {
                                         }
                                     </AccordionButton>
                                 </h2>
-                                <AccordionPanel pb={4} bg="brand.600">
+                                <AccordionPanel pb={4} bg="brand.700">
                                     <Center>
                                         <Document
                                             file={`${process.env.PUBLIC_URL}/ProjectPlan.pdf`}
