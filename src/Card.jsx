@@ -24,8 +24,8 @@ export default function Card(props) {
                 rounded="md"
                 // overflow="hidden"
             >
-                <Box p={6} style={{ paddingTop: '20%' }}>
-                    <Flex justify="center" mt={-12}>
+                <Box px={6}>
+                    <Flex justify="center" mt={3}>
                         <Avatar
                             size="xl"
                             src={`${process.env.PUBLIC_URL}/images/${picture}`}
