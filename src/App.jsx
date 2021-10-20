@@ -55,7 +55,7 @@ function App() {
                 stopOnHover={false}
                 autoPlay
                 interval={10000}
-                transitionTime={2000}
+                transitionTime={2500}
                 showStatus={false}
                 infiniteLoop
                 showThumbs={false}
