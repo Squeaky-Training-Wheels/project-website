@@ -22,7 +22,7 @@ export default function Card(props) {
                 minH="250px"
                 maxH="250px"
                 h="full"
-                bg="brand.500"
+                bg="brand.600"
                 boxShadow="2xl"
                 rounded="md"
                 overflow="hidden"
