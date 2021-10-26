@@ -41,7 +41,7 @@ export default function Card(props) {
                         </Heading>
                         {
                             roles.map((role) => (
-                                <Text color="brand.200">{role}</Text>
+                                <Text key={`role-${role}`} color="brand.200">{role}</Text>
                             ))
                         }
                     </Stack>

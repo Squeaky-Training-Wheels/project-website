@@ -106,6 +106,7 @@ function App() {
                                         {
                                             team.map((member) => (
                                                 <Card
+                                                    key={`card-${member.name}`}
                                                     name={member.name}
                                                     roles={member.roles}
                                                     picture={member.picture}
@@ -113,10 +114,19 @@ function App() {
                                             ))
                                         }
                                     </Stack>
-                                    <Text fontSize="2xl" fontWeight="bold">Faculty Coach</Text>
-                                    Bruce Herring
-                                    <Text fontSize="2xl" fontWeight="bold">Sponsor</Text>
-                                    Alan Delimon
+                                    <Text fontSize="3xl" fontWeight="bold">Coach and Sponsor</Text>
+                                    <Stack direction="row" justify="center">
+                                        <Card
+                                            name="Bruce Herring"
+                                            roles={['Faculty Coach']}
+                                            picture="bruce.jpeg"
+                                        />
+                                        <Card
+                                            name="Alan Delimon"
+                                            roles={['Sponsor']}
+                                            picture="alan.jpeg"
+                                        />
+                                    </Stack>
                                 </AccordionPanel>
                             </div>
                         )
