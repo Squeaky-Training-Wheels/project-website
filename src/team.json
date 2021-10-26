@@ -4,14 +4,14 @@
         "roles": [
             "Web and Mobile Tech Lead"
         ],
-        "picture": ""
+        "picture": "bri.jpeg"
     },
     {
         "name": "Jacob Jirinec",
         "roles": [
             "Backend Tech Lead"
         ],
-        "picture": ""
+        "picture": "jacob.jpeg"
     },
     {
         "name": "Elijah Parish",
@@ -19,7 +19,7 @@
             "Communications Lead",
             "Website Maintainer"
         ],
-        "picture": ""
+        "picture": "eli.png"
     },
     {
         "name": "Matt Robison",
@@ -28,7 +28,7 @@
             "Process Manager",
             "CI/CD Manager"
         ],
-        "picture": ""
+        "picture": "matt.jpeg"
     },
     {
         "name": "CJ Schaefer",
