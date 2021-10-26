@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/project-website/static/css/main.615da786.chunk.css",
-    "main.js": "/project-website/static/js/main.7fa3c695.chunk.js",
-    "main.js.map": "/project-website/static/js/main.7fa3c695.chunk.js.map",
-    "runtime-main.js": "/project-website/static/js/runtime-main.d89387d8.js",
-    "runtime-main.js.map": "/project-website/static/js/runtime-main.d89387d8.js.map",
+    "main.js": "/project-website/static/js/main.9ae30d19.chunk.js",
+    "main.js.map": "/project-website/static/js/main.9ae30d19.chunk.js.map",
+    "runtime-main.js": "/project-website/static/js/runtime-main.b640045f.js",
+    "runtime-main.js.map": "/project-website/static/js/runtime-main.b640045f.js.map",
     "static/css/2.ba8c07d2.chunk.css": "/project-website/static/css/2.ba8c07d2.chunk.css",
-    "static/js/2.64aa00fd.chunk.js": "/project-website/static/js/2.64aa00fd.chunk.js",
-    "static/js/2.64aa00fd.chunk.js.map": "/project-website/static/js/2.64aa00fd.chunk.js.map",
-    "static/js/3.1bd09e92.chunk.js": "/project-website/static/js/3.1bd09e92.chunk.js",
-    "static/js/3.1bd09e92.chunk.js.map": "/project-website/static/js/3.1bd09e92.chunk.js.map",
+    "static/js/2.2e634c74.chunk.js": "/project-website/static/js/2.2e634c74.chunk.js",
+    "static/js/2.2e634c74.chunk.js.map": "/project-website/static/js/2.2e634c74.chunk.js.map",
+    "static/js/3.c45869c9.chunk.js": "/project-website/static/js/3.c45869c9.chunk.js",
+    "static/js/3.c45869c9.chunk.js.map": "/project-website/static/js/3.c45869c9.chunk.js.map",
     "index.html": "/project-website/index.html",
     "static/css/2.ba8c07d2.chunk.css.map": "/project-website/static/css/2.ba8c07d2.chunk.css.map",
     "static/css/main.615da786.chunk.css.map": "/project-website/static/css/main.615da786.chunk.css.map",
-    "static/js/2.64aa00fd.chunk.js.LICENSE.txt": "/project-website/static/js/2.64aa00fd.chunk.js.LICENSE.txt",
+    "static/js/2.2e634c74.chunk.js.LICENSE.txt": "/project-website/static/js/2.2e634c74.chunk.js.LICENSE.txt",
     "static/media/index.css": "/project-website/static/media/russo-one-latin-ext-400-normal.6cf376c8.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.d89387d8.js",
+    "static/js/runtime-main.b640045f.js",
     "static/css/2.ba8c07d2.chunk.css",
-    "static/js/2.64aa00fd.chunk.js",
+    "static/js/2.2e634c74.chunk.js",
     "static/css/main.615da786.chunk.css",
-    "static/js/main.7fa3c695.chunk.js"
+    "static/js/main.9ae30d19.chunk.js"
   ]
 }
