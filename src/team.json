@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Brianna Fehring",
+        "roles": [
+            "Web and Mobile Tech Lead"
+        ],
+        "picture": "bri.jpeg"
+    },
+    {
+        "name": "Jacob Jirinec",
+        "roles": [
+            "Backend Tech Lead"
+        ],
+        "picture": "jacob.jpeg"
+    },
+    {
+        "name": "Elijah Parrish",
+        "roles": [
+            "Communications Lead",
+            "Website Maintainer"
+        ],
+        "picture": "eli.png"
+    },
+    {
+        "name": "Matt Robison",
+        "roles": [
+            "Git Lord",
+            "Process Manager",
+            "CI/CD Manager"
+        ],
+        "picture": "matt.jpeg"
+    },
+    {
+        "name": "CJ Schaefer",
+        "roles": [
+            "Project Manager",
+            "Scrum Master"
+        ],
+        "picture": "cj.jfif"
+    }
+]
