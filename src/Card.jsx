@@ -23,7 +23,6 @@ export default function Card(props) {
                 maxH="250px"
                 h="full"
                 bg="brand.600"
-                boxShadow="2xl"
                 rounded="md"
                 overflow="hidden"
             >
@@ -36,7 +35,13 @@ export default function Card(props) {
                         />
                     </Flex>
                     <Stack spacing={0} align="center" mb={5}>
-                        <Heading fontSize="2xl" fontWeight="semibold" fontFamily="body" color="brand.200">
+                        <Heading
+                            fontSize="2xl"
+                            fontWeight="semibold"
+                            fontFamily="body"
+                            color="brand.200"
+                            textColor="brand.300"
+                        >
                             {name}
                         </Heading>
                         {
