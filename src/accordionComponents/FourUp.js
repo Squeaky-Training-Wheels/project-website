@@ -16,7 +16,7 @@ class FourUp extends React.Component {
                         />
                     </Box>
                     <Box p="5">
-                        <span style={{ textAlign: 'center' }}>{caption}</span>
+                        <span style={{ textAlign: 'center', color: '#ed8936' }}>{caption}</span>
                     </Box>
                 </VStack>
             </Center>
