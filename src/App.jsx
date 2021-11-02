@@ -1,4 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import './App.css';
 import { Document, Page, pdfjs } from 'react-pdf';
@@ -61,9 +60,10 @@ export default class App extends React.Component {
     }
 
     render() {
+        const { colorMode } = this.state;
         return (
             <ChakraProvider theme={theme}>
-                <Box className="App" bg={this.state.colorMode === 'light' ? 'brand.900' : 'brand.300'}>
+                <Box className="App" bg={colorMode === 'light' ? 'brand.900' : 'brand.300'}>
                     <Heading align="left" pr="2" pl="2" pb="0" left="16px">
                         <Flex>
                             <Text
@@ -77,7 +77,7 @@ export default class App extends React.Component {
                                 pt="2"
                                 fontSize="2xl"
                                 style={
-                                    this.state.colorMode === 'light'
+                                    colorMode === 'light'
                                         ? { color: '#161616' } : { color: '#A9A9A9' }
                                 }
                             >
@@ -91,7 +91,7 @@ export default class App extends React.Component {
                                 size="sm"
                                 variant="ghost"
                                 fontSize="24px"
-                                color={this.state.colorMode === 'light' ? 'brand.300' : 'brand.100'}
+                                color={colorMode === 'light' ? 'brand.300' : 'brand.100'}
                                 icon={<MdNightsStay />}
                             />
                             <LinkBox p="0">
@@ -101,7 +101,7 @@ export default class App extends React.Component {
                                         variant="ghost"
                                         p="0"
                                         fontSize="24px"
-                                        color={this.state.colorMode === 'light' ? 'brand.200' : 'brand.100'}
+                                        color={colorMode === 'light' ? 'brand.200' : 'brand.100'}
                                         icon={<AiFillGithub />}
                                     />
                                 </LinkOverlay>
@@ -133,9 +133,9 @@ export default class App extends React.Component {
                                     <div>
                                         <h2>
                                             <AccordionButton
-                                                bg={this.state.colorMode === 'light' ? 'brand.900' : 'brand.300'}
+                                                bg={colorMode === 'light' ? 'brand.900' : 'brand.300'}
                                                 _hover={
-                                                    this.state.colorMode === 'light'
+                                                    colorMode === 'light'
                                                         ? { background: 'brand.600' } : { background: 'brand.200' }
                                                 }
                                             >
@@ -144,7 +144,7 @@ export default class App extends React.Component {
                                                     fontWeight="semibold"
                                                     flex="1"
                                                     textAlign="left"
-                                                    color={this.state.colorMode === 'light' ? 'brand.800' : 'brand.100'}
+                                                    color={colorMode === 'light' ? 'brand.800' : 'brand.100'}
                                                 >
                                                     The Team
                                                 </Box>
@@ -165,12 +165,12 @@ export default class App extends React.Component {
                                         </h2>
                                         <AccordionPanel
                                             pb={4}
-                                            bg={this.state.colorMode === 'light' ? 'brand.700' : 'brand.200'}
+                                            bg={colorMode === 'light' ? 'brand.700' : 'brand.200'}
                                         >
                                             <Text
                                                 fontSize="3xl"
                                                 fontWeight="bold"
-                                                textColor={this.state.colorMode === 'light' ? 'brand.300' : 'brand.100'}
+                                                textColor={colorMode === 'light' ? 'brand.300' : 'brand.100'}
                                             >
                                                 Seniors
                                             </Text>
@@ -189,7 +189,7 @@ export default class App extends React.Component {
                                             <Text
                                                 fontSize="3xl"
                                                 fontWeight="bold"
-                                                textColor={this.state.colorMode === 'light' ? 'brand.300' : 'brand.100'}
+                                                textColor={colorMode === 'light' ? 'brand.300' : 'brand.100'}
                                             >
                                                 Coach and Sponsor
                                             </Text>
@@ -216,9 +216,9 @@ export default class App extends React.Component {
                                     <>
                                         <h2>
                                             <AccordionButton
-                                                bg={this.state.colorMode === 'light' ? 'brand.900' : 'brand.300'}
+                                                bg={colorMode === 'light' ? 'brand.900' : 'brand.300'}
                                                 _hover={
-                                                    this.state.colorMode === 'light'
+                                                    colorMode === 'light'
                                                         ? { background: 'brand.600' } : { background: 'brand.200' }
                                                 }
                                             >
@@ -227,7 +227,7 @@ export default class App extends React.Component {
                                                     fontWeight="semibold"
                                                     flex="1"
                                                     textAlign="left"
-                                                    color={this.state.colorMode === 'light' ? 'brand.800' : 'brand.100'}
+                                                    color={colorMode === 'light' ? 'brand.800' : 'brand.100'}
                                                 >
                                                     Project Synopsis
                                                 </Box>
@@ -242,11 +242,11 @@ export default class App extends React.Component {
                                         </h2>
                                         <AccordionPanel
                                             pb={4}
-                                            bg={this.state.colorMode === 'light' ? 'brand.700' : 'brand.200'}
+                                            bg={colorMode === 'light' ? 'brand.700' : 'brand.200'}
                                         >
                                             <Text
                                                 fontSize="xl"
-                                                textColor={this.state.colorMode === 'light' ? 'brand.300' : 'brand.100'}
+                                                textColor={colorMode === 'light' ? 'brand.300' : 'brand.100'}
                                             >
                                                 The Palmyra Racing Association Club Manager is a web and mobile
                                                 application
@@ -261,7 +261,7 @@ export default class App extends React.Component {
                                             <br />
                                             <Text
                                                 fontSize="xl"
-                                                textColor={this.state.colorMode === 'light' ? 'brand.300' : 'brand.100'}
+                                                textColor={colorMode === 'light' ? 'brand.300' : 'brand.100'}
                                             >
                                                 Club members can use the application for updating their personal
                                                 information, renewing their membership, and signing up to
@@ -285,9 +285,9 @@ export default class App extends React.Component {
                                     <>
                                         <h2>
                                             <AccordionButton
-                                                bg={this.state.colorMode === 'light' ? 'brand.900' : 'brand.300'}
+                                                bg={colorMode === 'light' ? 'brand.900' : 'brand.300'}
                                                 _hover={
-                                                    this.state.colorMode === 'light'
+                                                    colorMode === 'light'
                                                         ? { background: 'brand.600' } : { background: 'brand.200' }
                                                 }
                                             >
@@ -296,7 +296,7 @@ export default class App extends React.Component {
                                                     fontWeight="semibold"
                                                     flex="1"
                                                     textAlign="left"
-                                                    color={this.state.colorMode === 'light' ? 'brand.800' : 'brand.100'}
+                                                    color={colorMode === 'light' ? 'brand.800' : 'brand.100'}
                                                 >
                                                     Time Tracking
                                                 </Box>
@@ -311,7 +311,7 @@ export default class App extends React.Component {
                                         </h2>
                                         <AccordionPanel
                                             pb={4}
-                                            bg={this.state.colorMode === 'light' ? 'brand.700' : 'brand.200'}
+                                            bg={colorMode === 'light' ? 'brand.700' : 'brand.200'}
                                         >
                                             <Carousel showStatus={false} showThumbs={false} useKeyboardArrows>
                                                 {
@@ -335,9 +335,9 @@ export default class App extends React.Component {
                                     <>
                                         <h2>
                                             <AccordionButton
-                                                bg={this.state.colorMode === 'light' ? 'brand.900' : 'brand.300'}
+                                                bg={colorMode === 'light' ? 'brand.900' : 'brand.300'}
                                                 _hover={
-                                                    this.state.colorMode === 'light'
+                                                    colorMode === 'light'
                                                         ? { background: 'brand.600' } : { background: 'brand.200' }
                                                 }
                                             >
@@ -346,7 +346,7 @@ export default class App extends React.Component {
                                                     fontWeight="semibold"
                                                     flex="1"
                                                     textAlign="left"
-                                                    color={this.state.colorMode === 'light' ? 'brand.800' : 'brand.100'}
+                                                    color={colorMode === 'light' ? 'brand.800' : 'brand.100'}
                                                 >
                                                     Weekly Four Ups
                                                 </Box>
@@ -361,7 +361,7 @@ export default class App extends React.Component {
                                         </h2>
                                         <AccordionPanel
                                             pb={4}
-                                            bg={this.state.colorMode === 'light' ? 'brand.700' : 'brand.200'}
+                                            bg={colorMode === 'light' ? 'brand.700' : 'brand.200'}
                                         >
                                             <Carousel showStatus={false} showThumbs={false} useKeyboardArrows>
                                                 {
@@ -385,9 +385,9 @@ export default class App extends React.Component {
                                     <>
                                         <h2>
                                             <AccordionButton
-                                                bg={this.state.colorMode === 'light' ? 'brand.900' : 'brand.300'}
+                                                bg={colorMode === 'light' ? 'brand.900' : 'brand.300'}
                                                 _hover={
-                                                    this.state.colorMode === 'light'
+                                                    colorMode === 'light'
                                                         ? { background: 'brand.600' } : { background: 'brand.200' }
                                                 }
                                             >
@@ -396,7 +396,7 @@ export default class App extends React.Component {
                                                     fontWeight="semibold"
                                                     flex="1"
                                                     textAlign="left"
-                                                    color={this.state.colorMode === 'light' ? 'brand.800' : 'brand.100'}
+                                                    color={colorMode === 'light' ? 'brand.800' : 'brand.100'}
                                                 >
                                                     Project Plan
                                                 </Box>
@@ -411,7 +411,7 @@ export default class App extends React.Component {
                                         </h2>
                                         <AccordionPanel
                                             pb={4}
-                                            bg={this.state.colorMode === 'light' ? 'brand.700' : 'brand.200'}
+                                            bg={colorMode === 'light' ? 'brand.700' : 'brand.200'}
                                         >
                                             <Center>
                                                 <Document
