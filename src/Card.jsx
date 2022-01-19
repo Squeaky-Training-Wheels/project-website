@@ -4,36 +4,31 @@ import {
     Avatar,
     Flex,
     Text,
-    // Stack,
     IconButton,
+    LinkBox,
+    LinkOverlay,
 } from '@chakra-ui/react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 
 export default function Card(props) {
-    const { name, roles, picture } = props;
+    const { name, roles, links, picture } = props;
 
-    function displayCardIcons() {
+    function displayCardIcons(link) {
         if (roles[0] !== 'Faculty Coach' && roles[0] !== 'Sponsor') {
             return (
-                <Flex marginTop="auto" marginBottom={2} justify="center">
-                    <IconButton
-                        size="sm"
-                        variant="ghost"
-                        p="0"
-                        fontSize="24px"
-                        color="brand.200"
-                        icon={<AiFillGithub />}
-                    />
-                    <IconButton
-                        size="sm"
-                        variant="ghost"
-                        p="0"
-                        fontSize="24px"
-                        color="brand.200"
-                        icon={<AiFillLinkedin />}
-                    />
-                </Flex>
+                <LinkBox p="0">
+                    <LinkOverlay p="0" href={link} target="_blank">
+                        <IconButton
+                            size="sm"
+                            variant="ghost"
+                            p="0"
+                            fontSize="24px"
+                            color="brand.200"
+                            icon={link.includes('github') ? <AiFillGithub /> : <AiFillLinkedin />}
+                        />
+                    </LinkOverlay>
+                </LinkBox>
             );
         }
         return <div />; // else return nothing
@@ -75,7 +70,13 @@ export default function Card(props) {
                     <Text lineHeight={1.2} fontSize="15px" key={`role-${role}`} color="brand.200">{role}</Text>
                 ))
             }
-            { displayCardIcons() }
+            <Flex marginTop="auto" marginBottom={2} justify="center">
+                {
+                    links.map((link) => (
+                        displayCardIcons(link)
+                    ))
+                }
+            </Flex>
         </Flex>
     );
 }
@@ -83,5 +84,10 @@ export default function Card(props) {
 Card.propTypes = {
     name: PropTypes.string.isRequired,
     roles: PropTypes.arrayOf(PropTypes.string).isRequired,
+    links: PropTypes.arrayOf(PropTypes.string),
     picture: PropTypes.string.isRequired,
+};
+
+Card.defaultProps = {
+    links: [],
 };

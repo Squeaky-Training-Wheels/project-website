@@ -4,12 +4,18 @@
         "roles": [
             "Web & Mobile Tech Lead"
         ],
+        "links": [
+            "google.com", "google.com"
+        ],
         "picture": "bri.jpeg"
     },
     {
         "name": "Jacob Jirinec",
         "roles": [
             "Backend Tech Lead"
+        ],
+        "links": [
+            "google.com", "google.com"
         ],
         "picture": "jacob.jpeg"
     },
@@ -18,6 +24,9 @@
         "roles": [
             "Communications Lead",
             "Website Maintainer"
+        ],
+        "links": [
+            "google.com", "google.com"
         ],
         "picture": "eli.png"
     },
@@ -28,6 +37,9 @@
             "Process Manager",
             "CI/CD Manager"
         ],
+        "links": [
+            "https://github.com/Squeaky-Training-Wheels", "https://github.com/Squeaky-Training-Wheels"
+        ],
         "picture": "matt.jpeg"
     },
     {
@@ -35,6 +47,9 @@
         "roles": [
             "Project Manager",
             "Scrum Master"
+        ],
+        "links": [
+            "google.com", "google.com"
         ],
         "picture": "cj.jfif"
     }
