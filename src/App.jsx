@@ -181,6 +181,7 @@ export default class App extends React.Component {
                                                             key={`card-${member.name}`}
                                                             name={member.name}
                                                             roles={member.roles}
+                                                            links={member.links}
                                                             picture={member.picture}
                                                         />
                                                     ))

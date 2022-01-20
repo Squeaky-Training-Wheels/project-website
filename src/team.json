@@ -2,7 +2,10 @@
     {
         "name": "Brianna Fehring",
         "roles": [
-            "Web and Mobile Tech Lead"
+            "Web & Mobile Tech Lead"
+        ],
+        "links": [
+            "https://www.linkedin.com/in/brianna-fehring/", "https://github.com/fehbrize"
         ],
         "picture": "bri.jpeg"
     },
@@ -11,6 +14,9 @@
         "roles": [
             "Backend Tech Lead"
         ],
+        "links": [
+            "https://www.linkedin.com/in/jacob-jirinec-905986149/", "https://github.com/jjirinec"
+        ],
         "picture": "jacob.jpeg"
     },
     {
@@ -18,6 +24,9 @@
         "roles": [
             "Communications Lead",
             "Website Maintainer"
+        ],
+        "links": [
+            "https://www.linkedin.com/in/elijah-parrish-21a957191/", "https://github.com/elijah-parrish"
         ],
         "picture": "eli.png"
     },
@@ -28,6 +37,9 @@
             "Process Manager",
             "CI/CD Manager"
         ],
+        "links": [
+            "https://www.linkedin.com/in/matt-robison/", "https://github.com/matedro"
+        ],
         "picture": "matt.jpeg"
     },
     {
@@ -35,6 +47,9 @@
         "roles": [
             "Project Manager",
             "Scrum Master"
+        ],
+        "links": [
+            "https://www.linkedin.com/in/cj-schaefer/", "https://github.com/cjs8487"
         ],
         "picture": "cj.jfif"
     }
