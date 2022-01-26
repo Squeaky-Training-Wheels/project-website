@@ -1,11 +1,23 @@
 [
   {
-      "frameName": "Calendar",
-      "caption": "Calendar Page"
+      "frameName": "SignIn",
+      "caption": "Sign In Page"
   },
   {
       "frameName": "Dashboard",
       "caption": "Dashboard Page"
+  },
+  {
+    "frameName": "Navigation",
+    "caption": "Navigation Page"
+  },
+  {
+    "frameName": "Calendar",
+    "caption": "Calendar Page"
+  },
+  {
+    "frameName": "SignUps",
+    "caption": "Sign Ups Page"
   },
   {
       "frameName": "Members",
@@ -26,17 +38,5 @@
   {
       "frameName": "MyAccount_Workpoint_History",
       "caption": "MyAccount - Workpoint History"
-  },
-  {
-      "frameName": "Navigation",
-      "caption": "Navigation Page"
-  },
-  {
-      "frameName": "SignIn",
-      "caption": "Sign In Page"
-  },
-  {
-      "frameName": "SignUps",
-      "caption": "Sign Ups Page"
   }
 ]
