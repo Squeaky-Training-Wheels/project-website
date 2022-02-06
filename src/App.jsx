@@ -25,11 +25,13 @@ import {
 import { ChevronUpIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import theme from './theme';
 
+import Wireframe from './accordionComponents/Wireframe';
 import Timesheet from './accordionComponents/Timesheet';
 import FourUp from './accordionComponents/FourUp';
 import HeaderImage from './accordionComponents/HeaderImage';
 import Card from './Card';
 
+import figmaframes from './accordionData/figmaframes.json';
 import timesheets from './accordionData/timesheets.json';
 import fourUps from './accordionData/fourups.json';
 import headerImages from './accordionData/headerImages.json';
@@ -428,6 +430,56 @@ export default class App extends React.Component {
                                                     </Wrap>
                                                 </Document>
                                             </Center>
+                                        </AccordionPanel>
+                                    </>
+                                )
+                            }
+                        </AccordionItem>
+                        <AccordionItem>
+                            {
+                                ({ isExpanded }) => (
+                                    <>
+                                        <h2>
+                                            <AccordionButton
+                                                bg={colorMode === 'light' ? 'brand.900' : 'brand.300'}
+                                                _hover={
+                                                    colorMode === 'light'
+                                                        ? { background: 'brand.600' } : { background: 'brand.200' }
+                                                }
+                                            >
+                                                <Box
+                                                    fontSize="2xl"
+                                                    fontWeight="semibold"
+                                                    flex="1"
+                                                    textAlign="left"
+                                                    color={colorMode === 'light' ? 'brand.800' : 'brand.100'}
+                                                >
+                                                    Figma Wireframes
+                                                </Box>
+                                                {
+                                                    isExpanded ? (
+                                                        <ChevronDownIcon fontSize="35px" color="brand.400" />
+                                                    ) : (
+                                                        <ChevronUpIcon fontSize="35px" color="brand.400" />
+                                                    )
+                                                }
+                                            </AccordionButton>
+                                        </h2>
+                                        <AccordionPanel
+                                            pb={4}
+                                            bg={colorMode === 'light' ? 'brand.700' : 'brand.200'}
+                                        >
+                                            <Carousel showStatus={false} showThumbs={false} useKeyboardArrows>
+                                                {
+                                                    figmaframes.map((wireframe) => (
+                                                        <Wireframe
+                                                            key={wireframe.frameName}
+                                                            frameName={wireframe.frameName}
+                                                            caption={wireframe.caption}
+                                                        />
+                                                    ))
+                                                }
+                                            </Carousel>
                                         </AccordionPanel>
                                     </>
                                 )
